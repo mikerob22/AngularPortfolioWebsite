@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <!-- About me -->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="../../assets/headshot.png" alt="profile picture" width="256" height="256" class="rounded-circle">
+                <p> 
+                    I recently graduated from the University of Florida with a degree in Materials Science and Engineering. 
+                    I'm now an Associate Engineer at NextEra Energy - Florida Power and Light, working in Power Delivery, 
+                    Transmission Engineering. My academic journey at UF provided me with a solid foundation in engineering, 
+                    complemented by research experiences in areas like Magnetic Barkhausen Noise (MBN), Artificial Intelligence, 
+                    and Engineering Education. In my current role, I'm contributing to NextEra Energy's mission of transforming and 
+                    progressing the energy industry. It's an exciting start to my engineering career, and I'm eager to learn and grow. 
+                    I'm committed to continuous professional development and aspire to explore new opportunities and make a positive 
+                    impact in the industry. While working as a Transmission Engineer, I am pursuing a Master of Science in Artificial 
+                    Intelligence at Florida Atlantic University to immerse myself in the fast-growing field of AI. I plan to use concepts 
+                    learned to develop professionally and apply my skills in industry.
+                    
+                </p>
+            </div>
+        </div>
+        <!-- Featured Project -->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Project</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide><img src={{picture}} alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Visit the Portfolio section to learn more!</p>
+
+        </div>
+    </div>
+</div>
